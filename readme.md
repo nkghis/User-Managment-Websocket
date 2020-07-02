@@ -122,27 +122,13 @@ Configuration
     PUSHER_APP_KEY=myKey
     PUSHER_APP_SECRET=mySecret
     ```
-    2. Edit resources/js/bootstrap.js , ajouter les lignes suivantes a la fin du fichier.
    
-        import Echo from 'laravel-echo';
-
-        window.Pusher = require('pusher-js');
-
-        window.Echo = new Echo({
-            broadcaster: 'pusher',
-            key: process.env.MIX_PUSHER_APP_KEY,
-            cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-            encrypted: false,
-            wsHost: window.location.hostname,
-            wsPort: 6001,
-            disableStats: true
-        });
  
-   3. Installer npm dans le projet laravel, il faudra au prealable installer npm sur la machine hote. Utiliser la commande suivante dans le projet laravel.
+   2. Installer npm dans le projet laravel, il faudra au prealable installer npm sur la machine hote. Utiliser la commande suivante dans le projet laravel.
       ``` bash
       npm install
       ```
-   4. Installer Laravel Echo
+   3. Installer Laravel Echo
    
    ``` bash
       npm install --save laravel-echo pusher-js
