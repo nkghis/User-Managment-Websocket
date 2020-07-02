@@ -109,19 +109,21 @@ La syntaxe pour creer les permissions est : `php artisan auth:permission {name} 
     
 ## Websocket 
 Ce Paquet contient Egalement:
+
     - Websocket Server (beyondcode Laravel websocket)
     - Laravel Echo bibliothèque JavaScript qui facilite l'abonnement aux chaînes et l'écoute des événements diffusés par Laravel.
     - Pusher-js bibliothèque JavaScript client permettant l'ecoute d'evenement sur une chaine utilisé par les navigateurs web.
     - NodeJS
     
 Configuration
-    1. Editer le fichier .env
-  
+
+1. Editer le fichier .env
+  #
     BROADCAST_DRIVER=pusher
     PUSHER_APP_ID=myId
     PUSHER_APP_KEY=myKey
     PUSHER_APP_SECRET=mySecret
-
+    
    
  
    2. Installer npm dans le projet laravel, il faudra au prealable installer npm sur la machine hote. Utiliser la commande suivante dans le projet laravel.
