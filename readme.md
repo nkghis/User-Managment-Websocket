@@ -31,7 +31,7 @@ Après avoir importé le paquet dans votre dossier, il va falloir le mettre à j
 Vous pouvez le mettre à jour le paquet via composer(ligne de commande : dossier importé):
 
 ``` bash
-composer update
+composer install
 ```
 
 ### BDD
@@ -105,3 +105,48 @@ La syntaxe pour creer les permissions est : `php artisan auth:permission {name} 
   * Paramètre {--R ou remove} est utilisé pour supprimer des permissions.
     Exemple : `php artisan auth:permission produits --R` ou `php artisan auth:permission produits remove`
     Resultat : les permissions suivantes seront supprimées : `add_produits, view_produits, edit_produits, delete_produits`
+    
+    
+### Websocket 
+Ce Paquet contient Egalement:
+    - Websocket Server (beyondcode Laravel websocket)
+    - Laravel Echo bibliothèque JavaScript qui facilite l'abonnement aux chaînes et l'écoute des événements diffusés par Laravel.
+    - Pusher-js bibliothèque JavaScript client permettant l'ecoute d'evenement sur une chaine utilisé par les navigateurs web.
+    - NodeJS
+    
+Configuration
+    1. Editer le fichier .env
+    ```
+    BROADCAST_DRIVER=pusher
+    PUSHER_APP_ID=myId
+    PUSHER_APP_KEY=myKey
+    PUSHER_APP_SECRET=mySecret
+    ```
+    2. Edit resources/js/bootstrap.js , ajouter les lignes suivantes a la fin du fichier.
+   
+        import Echo from 'laravel-echo';
+
+        window.Pusher = require('pusher-js');
+
+        window.Echo = new Echo({
+            broadcaster: 'pusher',
+            key: process.env.MIX_PUSHER_APP_KEY,
+            cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+            encrypted: false,
+            wsHost: window.location.hostname,
+            wsPort: 6001,
+            disableStats: true
+        });
+ 
+   3. Installer npm dans le projet laravel, il faudra au prealable installer npm sur la machine hote. Utiliser la commande suivante dans le projet laravel.
+      ``` bash
+      npm install
+      ```
+   4. Installer Laravel Echo
+   
+   ``` bash
+      npm install --save laravel-echo pusher-js
+      ```
+      
+    
+    
