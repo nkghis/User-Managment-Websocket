@@ -109,10 +109,10 @@ La syntaxe pour creer les permissions est : `php artisan auth:permission {name} 
     
 ### Websocket 
 Ce Paquet contient Egalement:
-    - Websocket Server (beyondcode Laravel websocket)
-    - Laravel Echo bibliothèque JavaScript qui facilite l'abonnement aux chaînes et l'écoute des événements diffusés par Laravel.
-    - Pusher-js bibliothèque JavaScript client permettant l'ecoute d'evenement sur une chaine utilisé par les navigateurs web.
-    - NodeJS
+    * Websocket Server (beyondcode Laravel websocket)
+    * Laravel Echo bibliothèque JavaScript qui facilite l'abonnement aux chaînes et l'écoute des événements diffusés par Laravel.
+    * Pusher-js bibliothèque JavaScript client permettant l'ecoute d'evenement sur une chaine utilisé par les navigateurs web.
+    * NodeJS
     
 Configuration
     1. Editer le fichier .env
@@ -139,5 +139,5 @@ Configuration
       ```
       
    5. Run cmd  to start laravel websocket server
-   ``` bash
+     ``` bash
       php artisan websockets:serve
