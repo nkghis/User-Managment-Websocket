@@ -14,7 +14,16 @@
 /*Route::get('/', function () {
     return view('auth.loginNew');
 });*/
+/* Route::get('/', function(){
+    return view('welcome');
+});
 
+Route::get('/a', function () {
+    if(Auth::check()){
+        return view('dashboard');
+    }
+    return view('auth.login');
+}); */
 Route::get('/', function () {
     if(Auth::check()){
         return view('dashboard');
@@ -35,5 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
     Route::resource('roles','RoleController');
+    Route::resource('posts','PostController');
 });
 

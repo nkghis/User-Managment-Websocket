@@ -17,7 +17,12 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            Echo.channel('chan-demo')
+            .listen('PostEvent', (e) => {
+            console.log(e.name);
+            });
+            
+            //console.log('Component mounted.')
         }
     }
 </script>
