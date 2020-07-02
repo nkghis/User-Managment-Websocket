@@ -107,12 +107,12 @@ La syntaxe pour creer les permissions est : `php artisan auth:permission {name} 
     Resultat : les permissions suivantes seront supprimées : `add_produits, view_produits, edit_produits, delete_produits`
     
     
-### Websocket 
+## Websocket 
 Ce Paquet contient Egalement:
-    * Websocket Server (beyondcode Laravel websocket)
-    * Laravel Echo bibliothèque JavaScript qui facilite l'abonnement aux chaînes et l'écoute des événements diffusés par Laravel.
-    * Pusher-js bibliothèque JavaScript client permettant l'ecoute d'evenement sur une chaine utilisé par les navigateurs web.
-    * NodeJS
+    - Websocket Server (beyondcode Laravel websocket)
+    - Laravel Echo bibliothèque JavaScript qui facilite l'abonnement aux chaînes et l'écoute des événements diffusés par Laravel.
+    - Pusher-js bibliothèque JavaScript client permettant l'ecoute d'evenement sur une chaine utilisé par les navigateurs web.
+    - NodeJS
     
 Configuration
     1. Editer le fichier .env
