@@ -128,11 +128,17 @@ Configuration
       ``` bash
       npm install
       ```
-   3. Installer Laravel Echo
+   3. Compiler npm
    
-   ``` bash
-      npm install --save laravel-echo pusher-js
+      ``` bash
+      npm install
+      ```
+   4. Run cmd to start laravel project 
+      ``` bash
+      php artisan serve
       ```
       
-    
-    
+   5. Run cmd  to start laravel websocket server
+   ``` bash
+      php artisan websockets:serve
+      ```
