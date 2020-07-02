@@ -116,12 +116,12 @@ Ce Paquet contient Egalement:
     
 Configuration
     1. Editer le fichier .env
-    ```
+  
     BROADCAST_DRIVER=pusher
     PUSHER_APP_ID=myId
     PUSHER_APP_KEY=myKey
     PUSHER_APP_SECRET=mySecret
-    ```
+
    
  
    2. Installer npm dans le projet laravel, il faudra au prealable installer npm sur la machine hote. Utiliser la commande suivante dans le projet laravel.
