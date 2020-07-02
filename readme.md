@@ -131,7 +131,7 @@ Configuration
    3. Compiler npm
    
       ``` bash
-      npm install
+      npm run watch
       ```
    4. Run cmd to start laravel project 
       ``` bash
@@ -141,4 +141,3 @@ Configuration
    5. Run cmd  to start laravel websocket server
    ``` bash
       php artisan websockets:serve
-      ```
